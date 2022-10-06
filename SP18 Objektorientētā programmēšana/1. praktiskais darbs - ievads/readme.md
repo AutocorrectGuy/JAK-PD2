@@ -1,4 +1,6 @@
-# Praktiskais darbs
+# Tēma: ievads
+
+### Darba apraksts
 
 - Izveidojiet jaunu klasi Cars, kurā atradīsies trīs protected tipa mainīgie ```color```, ```price```, ```type```.
 - Izveidojiet šīs klases **konstruktoru** ar parametriem ```color```, ```price```, ```type```.
