@@ -1,1 +1,2 @@
-SP18 Objektorientētā programmēšana
+# SP18 Objektorientētā programmēšana
+Pasniedzējs: ```O. Jakovļevs```
