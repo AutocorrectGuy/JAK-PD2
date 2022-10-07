@@ -2,10 +2,13 @@
 /**
  * 9. Autora piezīme: ar vārdu "unikāls" šajā uzdevuma risinājumā
  * tiek apzīmēts masīva elements, kurš var atkārtoties tikai
- * vienu reizi. 
+ * vienu reizi. Ja viņš atkārtojas >1 reizi, uzdevuma autors risinājumā
+ * pieņem, ka šāda vērtība nav unikāla.
+ * 
  * Tāda pati ideja arī saistībā par "duplicētajiem" masīvu elementiem.
- * Tādēļ funkcija array_unique() atgriež arī tādas vērtības, kuras
- * atārtojas vairākas reizes, tādēļ šajā gadījumā tā netiek izmantota.
+ * 
+ * Tā kā funkcija array_unique() atgriež arī tādas vērtības, kuras
+ * atārtojas vairākas reizes, šī funkcija šajā gadījumā tā netiek izmantota.
  * 
  * Nosacījumi: dots masīvs [2,4,7,2,5,7,4,6,8,8,9]. 
  *    9.1. Veidot jaunu masīvu $unique, kurā iekļaut tikai 

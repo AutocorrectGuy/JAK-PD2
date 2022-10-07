@@ -1,6 +1,6 @@
-# Jēkabpils Agrobiznes Koledža
+# Jēkabpils Agrobiznesa Koledža
 
-### Studiju kurss ```Programmēšana```
+### Studiju programma ```Programmēšana```
 
 Šajā datu glabātuvē pieejami studiju programmas ```Programmēšana``` studiju kursu darbi. 
 Studiju kursi: 

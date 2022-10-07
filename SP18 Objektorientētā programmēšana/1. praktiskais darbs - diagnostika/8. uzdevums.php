@@ -1,5 +1,8 @@
 <?php
 /**
+ * Autora piezīme: aizliegts izmantot strrev: tādēļ konvertēju string tipa
+ * mainīgo par masīvu un izmantoju array_reverse() :D.
+ * 
  * 8. Dota simbolu virkne: “bawefwefYTFafnhawevfllwidhbvAWDHaadgf”.  
  *    8.1. Izvadīt virkni, bet katru otro simbolu pataisīt par
  *    augšējā reģistra burtu! 
@@ -11,40 +14,29 @@
  *    8.6. Izvadīt tieši 13. virknes elementu. 
  */
 
-$myString = "bawefwefYTFafnhawevfllwidhbvAWDHaadgf";
+$myString = 'bawefwefYTFafnhawevfllwidhbvAWDHaadg';
 
-// 8.1 Prints string with each other letter uppercased (with for loop)
+// 8.1 Prints string with each other letter uppercased
 function printEvenToUppercase(string $str): void
 {
-  for ($i = 0; $i < strlen($str); $i++) {
-    if ($i % 2) {
-      $str[$i] = strtoupper($str[$i]);
-    }
-  }
-  print($str);
+  $exploded = str_split($str);
+  foreach ($exploded as $key => $value)
+    $key % 2 && $exploded[$key] = strtoupper($exploded[$key]);
+  print(join($exploded));
 }
 
-// 8.2. Prints reversed string (with for loop)
+// 8.2. Prints reversed string (without strrev)
 function printReversedString(string $str): void
 {
-  $reversedStr = "";
-  for ($i = strlen($str) - 1; $i >= 0; $i--) {
-    $reversedStr = $reversedStr . $str[$i];
-  }
-  print($reversedStr);
+  print(join(array_reverse(str_split($str))));
 }
 
 // 8.3. Returns count of char "a" occurences (int) in given string
 function countOccurencesOfCharA(string $str): int
 {
-  $occurencesCount = 0;
-  for ($i = 0; $i < strlen($str); $i++) {
-    if ($str[$i] == "a") {
-      $occurencesCount++;
-    }
-  }
-  return $occurencesCount;
+  return substr_count($str, "a");
 }
+print(countOccurencesOfCharA($myString));
 
 // 8.4. Prints strings length
 function printStrLength(string $str): void

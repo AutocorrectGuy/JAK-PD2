@@ -5,7 +5,6 @@
  * parametrus (strikta deklarācija)! Funkcija atgriež 
  * skaitļu summu. 
  */
-
 function getSum(int $x, int $y): int
 {
   return $x + $y;
@@ -16,7 +15,6 @@ function getSum(int $x, int $y): int
  * saņem String tipa mainīgo! Uz ekrāna izvada tā simbolu 
  * daudzumu. 
  */
-
 function printCharCount(string $myString): void
 {
   print(strlen($myString));
@@ -27,7 +25,6 @@ function printCharCount(string $myString): void
  * deklarācija) un atgriež vidējo aritmētisko (iebūvētās 
  * funkcijas izmantot ir aizliegts)! 
  */
-
 function getAverage(int $x, int $y, int $z): float
 {
   return (($x + $y + $z) / 3);
