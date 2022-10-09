@@ -23,17 +23,16 @@ $myArray = [2, 4, 7, 2, 5, 7, 4, 6, 8, 8, 9];
 // 9.1. saves unique values from $myArray in a new array
 $unique = array_reduce($myArray, fn($acc, $curr) => in_array($curr, $acc)
   ? array_filter($acc, fn($unique) => $unique != $curr)
-  : [...$acc, $curr], 
+  : [...$acc, $curr],
 []);
 // 9.2. saves duplicated values from $myArray in a new array
 $duplicate = array_filter($myArray, fn($el) => !in_array($el, $unique));
 // 9.3. Prints $unique and $duplicate sums and evaluation!
-$uniqueSum = array_sum($unique);
-$duplicateSum = array_sum($duplicate);
+[$uniqueSum, $duplicateSum] = [array_sum($unique), array_sum($duplicate)];
 print($uniqueSum == $duplicateSum
-  ? "Summas sakrīt (katras summas vērtība ir \"" . $uniqueSum . "\")!"
-  : ($uniqueSum > $duplicateSum 
-    ? "Unikālo skaitļu summa \"{$uniqueSum}\" ir lielāka, nekā duplikātu summa \"{$duplicateSum}\"!" 
-    : "Duplicēto skaitļu summa \"{$duplicateSum}\" ir lielāka, nekā unikālo skaitļu summa \"{$uniqueSum}\"!" 
+  ? 'Summas sakrīt (katras summas vērtība ir "' . $uniqueSum . '")!'
+  : ($uniqueSum > $duplicateSum
+    ? 'Unikālo skaitļu summa "' . $uniqueSum . '" ir lielāka, nekā duplikātu summa "' . $duplicateSum . '"!'
+    : 'Duplicēto skaitļu summa "' . $duplicateSum . '" ir lielāka, nekā unikālo skaitļu summa "' . $uniqueSum . '"!'
   )
 );

@@ -34,7 +34,7 @@ function printReversedString(string $str): void
 // 8.3. Returns count of char "a" occurences (int) in given string
 function countOccurencesOfCharA(string $str): int
 {
-  return substr_count($str, "a");
+  return substr_count($str, 'a');
 }
 print(countOccurencesOfCharA($myString));
 

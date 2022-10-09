@@ -10,5 +10,5 @@ $int1 = 5;
 $int2 = 3;
 
 print($int1 == $int2
-  ? "Skaitļi sakrīt (abi ir \"" . $int1 . "\")!"
-  : "Skaitlis \"" . ($int1 < $int2 ? $int1 : $int2) . "\" ir mazāks!");
+  ? 'Skaitļi sakrīt (abi ir "' . $int1 . '")!'
+  : 'Skaitlis "' . ($int1 < $int2 ? $int1 : $int2) . '" ir mazāks!');

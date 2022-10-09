@@ -10,7 +10,7 @@
  *    klases Worker. Šai metodei jāievada šādi protected lauki: braukšanas 
  *    pieredze, braukšanas kategorija: A, B, C. 
  */
-require_once("./Worker.php");
+require_once('./Worker.php');
 
 const ALLOWED_DRIVING_CATEGORIES = ['A', 'B', 'C'];
 

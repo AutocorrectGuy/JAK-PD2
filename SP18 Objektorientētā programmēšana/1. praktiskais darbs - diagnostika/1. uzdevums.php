@@ -20,4 +20,4 @@ $myArray = [];
 class MyObject {}
 $myObject = new MyObject();
 // Resource (file taken from this folder)
-$myResource = fopen("readme.md", "r");
+$myResource = fopen('readme.md', 'r');

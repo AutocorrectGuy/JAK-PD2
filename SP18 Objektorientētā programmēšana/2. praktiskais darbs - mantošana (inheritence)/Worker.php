@@ -4,7 +4,7 @@
  *    papildu privāto algas lauku, kā arī publiskās getSalary un 
  *    setSalary metodes. 
  */
-require_once("./User.php");
+require_once('./User.php');
 
 class Worker extends User
 {

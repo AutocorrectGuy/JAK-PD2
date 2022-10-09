@@ -7,6 +7,6 @@
 function printEvenNumbers(): void
 {
   for ($i = 1; $i <= 100; $i++)
-    !($i % 2) && print($i . "<br />");
+    !($i % 2) && print($i . '<br />');
 }
 printEvenNumbers();

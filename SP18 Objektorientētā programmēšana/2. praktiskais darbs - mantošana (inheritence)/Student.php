@@ -4,7 +4,7 @@
  *    Users un ievieš papildu protected tipa mainīgos stipendiju, kursu, 
  *    kā arī setter un getter metodes. 
  */
-require_once("./User.php");
+require_once('./User.php');
 
 class Student extends User
 {

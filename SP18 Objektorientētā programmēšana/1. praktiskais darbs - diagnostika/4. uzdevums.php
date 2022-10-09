@@ -59,13 +59,13 @@ function collectEachSecond(array $arr): array
 // Prints the generated array and all values of used functions from this file
 function prettyPrintTask(array $arr): void
 {
-  print("Dotais masīvs ar 10 nejaušiem cipariem: "
-    . join(", ", $arr) . ". "
-    . "<br />4.1. Skaitļu summa: " . getSum($arr) . ".<br />"
-    . "4.2. Mazākais skaitlis: " . getMinValue($arr) . ".<br />"
-    . "4.3. Lielākais skaitlis: " . getMaxValue($arr) . ".<br />"
-    . "4.4. Virkne, kurā iekļauts tikai katrs otrais masīva elements: "
-    . join(", ", collectEachSecond($arr)) . ". "
+  print('Dotais masīvs ar 10 nejaušiem cipariem: '
+    . join(', ', $arr) . '. '
+    . '<br />4.1. Skaitļu summa: ' . getSum($arr) . '.<br />'
+    . '4.2. Mazākais skaitlis: ' . getMinValue($arr) . '.<br />'
+    . '4.3. Lielākais skaitlis: ' . getMaxValue($arr) . '.<br />'
+    . '4.4. Virkne, kurā iekļauts tikai katrs otrais masīva elements: '
+    . join(", ", collectEachSecond($arr)) . '. '
     );
 }
 
