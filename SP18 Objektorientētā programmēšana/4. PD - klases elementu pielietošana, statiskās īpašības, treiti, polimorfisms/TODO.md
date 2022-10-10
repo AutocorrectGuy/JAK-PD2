@@ -1,1 +1,0 @@
-salikt namespaces

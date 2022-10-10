@@ -10,6 +10,8 @@
  * Tālāk nekas nav minēts.
  */
 
+namespace Uzdevums2;
+
 class TaskTwo
 {
   protected $parameter;

@@ -7,9 +7,13 @@
  * nepieciešamās set un get metodes manipulācijai ar datiem. 
  */
 
+namespace Uzdevums5;
+
 class DataObject
 {
   private $data;
+  
+  // setter and getter function for $data
   public function setData($data): void
   {
     $this->data = $data;

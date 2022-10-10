@@ -7,6 +7,8 @@
  * funckijas (no abstraktās klases) describeCat un nameCat! 
  */
 
+namespace Uzdevums3;
+
 abstract class AbstractCatDescriber
 {
   abstract public function describeCat();

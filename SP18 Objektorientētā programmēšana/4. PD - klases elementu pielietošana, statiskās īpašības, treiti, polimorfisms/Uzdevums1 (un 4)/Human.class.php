@@ -4,6 +4,9 @@
  * funkcijai `toCatAge` jāsaņem parametrs no citas
  * klases. Tātad, šeit tiek definēta šī klase.
  */
+
+namespace Uzdevums1;
+
 class Human
 {
   protected int $age;

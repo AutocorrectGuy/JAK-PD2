@@ -1,25 +1,28 @@
 <?php
-require_once("./Uzdevums1/Cat.class.php");
-require_once("./Uzdevums1/Human.class.php");
+require_once("./Uzdevums1 (un 4)/Cat.class.php");
+require_once("./Uzdevums1 (un 4)/Human.class.php");
 require_once("./Uzdevums2/TaskTwo.class.php");
 require_once("./Uzdevums3/AbstractCatDescriber.class.php");
 require_once("./Uzdevums5/DataObject.class.php");
 
 /**
  * Programmas testēšana
+ * Piezīme: neizmantoju `use` atslēgas vārdu, jo uzdevumam ir šāds nosacījums: 
+ * "uzdevumu izpildē visām realizētajām klasēm pielietot **namespace**".
+ * Tādēļ pirms katras importētās klases atsevišķi pierakstu viņas `namespace`
  */
 
 /**
  * 1. uzdevums
  */
-$myHuman = new Human(10);
+$myHuman = new Uzdevums1\Human(10);
 print('Cilvēka vecums: "' . $myHuman->getAge() . '".<br />');
-print('Cilvēka vecums kaķa gados: "' . Cat::toCatAge($myHuman->getAge()) . '".<br /><br />');
+print('Cilvēka vecums kaķa gados: "' . Uzdevums1\Cat::toCatAge($myHuman->getAge()) . '".<br /><br />');
 
 /**
  * 2. uzdevums
  */
-$myTask = new TaskTwo('test');
+$myTask = new Uzdevums2\TaskTwo('test');
 print('<br />');
 
 /**
@@ -27,7 +30,7 @@ print('<br />');
  */
 
 // Klases `Cat` pielietošana
-$myCat = new Cat;
+$myCat = new Uzdevums1\Cat;
 $myCat->nameCat();
 $myCat->describeCat();
 print('<br />');
@@ -39,6 +42,6 @@ print('<br />');
  * programmas testēšanā `myHuman` un `myCat`
  */
 
-$dataObj = new DataObject;
+$dataObj = new Uzdevums5\DataObject;
 $dataObj->setData([$myHuman, $myCat]);
 var_dump($dataObj->getData());

@@ -6,9 +6,17 @@
  * funkcija saņems vienu parametru no citas klases (cilvēka gadus) un 
  * aprēķinās kaķa gadus attiecībā 1:4 (1 cilvēka gads = 4 kaķa gadi). 
  * Funkcija atgriezīs izrēķināto gadu skaitu. Izvadīt gadu skaitu uz ekrāna! 
- */
+ * 
+ * 4. uzdevums (abstraktās funkcijas)
+ * Funkcijā describeCat veidot jaunu masīvu! Masīvā saglabāt 5 vārdus, 
+ * kas raksturo kaķus! Ar foreach cikla palīdzību izvadīt visus
+ * masīva elementus uz ekrāna! 
+ * - Ja nebūtu jāpielieto foreach, tad būtu pielietojis `join()` funckciju
+*/
 
-// '../' nedarbojās, tādēļ izmantoju šādu sintaksi:
+namespace Uzdevums1;
+use Uzdevums3;
+
 require_once(dirname(__DIR__) . '/Uzdevums3/AbstractCatDescriber.class.php');
 
 /**
@@ -26,35 +34,23 @@ const CAT_NAMES = [
   'Puddy Tat'
 ];
 
-class Cat extends AbstractCatDescriber
+class Cat extends Uzdevums3\AbstractCatDescriber
 {
-
   protected string $catName;
 
-  /* Aprēķinās kaķa gadus attiecībā 1:4
-   * - Neatkarīga no šī kaķa vecuma (jo kaķim netiek definēts viņa vecums),
-   * tādēļ šī funkcija ir statiska. Rezultātā nav jāveido jauns kaķis tikai
-   * konvertētu vecumu
-   */
+  // converts human age to cat age in ratio 1 : 4
   public static function toCatAge(int|float $humanAge)
   {
     return $humanAge * 4;
   }
 
-  // Funkcija atgriež `kaķa vārdu` (no iespējamajiem kaķu vārdiem `CAT_NAMES`) 
+  // returns random Cat name from `CAT_NAMES`
   public static function returnRandomCatName(): string
   {
     return CAT_NAMES[rand(0, sizeof(CAT_NAMES) - 1)];
   }
 
-  /**
-   * 4. uzdevums (abstraktās funkcijas)
-   * Funkcijā describeCat veidot jaunu masīvu! Masīvā saglabāt 5 vārdus, 
-   * kas raksturo kaķus! Ar foreach cikla palīdzību izvadīt visus
-   * masīva elementus uz ekrāna! 
-   * 
-   * Ja nebūtu jāpielieto foreach, tad būtu pielietojis `join()` funckciju
-   */
+  // From abstract class: prints out on screen predefined description of cat
   public function describeCat()
   {
     $catProperties = ['garspalvains', 'jauks', 'ātrs', 'elegants', 'ruds'];
@@ -65,14 +61,14 @@ class Cat extends AbstractCatDescriber
     print('<br />');
   }
 
-  // Dod kaķim vārdu: saglabā mainīgajā `catName`
+  // From abstract class: sets `catName` to random cat name with `returnRandomCatName` fn and prints it on screen
   public function nameCat()
   {
     $this->setCatName(self::returnRandomCatName());
     print('Kaķa vārds ir "' . $this->getCatName() . '". <br />');
   }
 
-  // geter un setter f-jas priekš $catName
+  // geter and setter fn for $catName
   public function setCatName($catName): void
   {
     $this->catName = $catName;
