@@ -1,10 +1,6 @@
 Pārbaudes darbs 
 
- 
-
 Tēmas: Klases elementu pielietošana, statiskās īpašības, treiti, polimorfisms. 
-
- 
 
 Uzdevumu izpildē visām realizētajām klasēm pielietot namespace! 
 
@@ -13,8 +9,6 @@ Funkcijas tiek izskauktas index.php failā.
  
 
 Veidot jaunu klasi Cat! Klases ietvaros realizēt funkciju toCatAge! Šī funkcija saņems vienu parametru no citas klases (cilvēka gadus) un aprēķinās kaķa gadus attiecībā 1:4 (1 cilvēka gads = 4 kaķa gadi). Funkcija atgriezīs izrēķināto gadu skaitu. Izvadīt gadu skaitu uz ekrāna! 
-
- 
 
 Veidot jaunu klasi! Nosaukums pēc brīvas izvēles, ņemot vērā failu un klašu nosaukumu noteikumus. Klases ietvaros realizēt funkciju, kas pados parametru iepriekš definētajai klasei! Funkcija nesatur atgriežamo tipu. 
 
