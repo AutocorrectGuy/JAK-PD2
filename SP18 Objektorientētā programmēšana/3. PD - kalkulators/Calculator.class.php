@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Šobrīd visa veidotā loģika ir konkrēt kalkulatora
+ * Šobrīd visa veidotā loģika ir konkrēti kalkulatora
  * daļā, kura veic aprēķinus - `CalculationsMaker`.
  * Šajā klasē nākotnē varētu pievienot loģiku, ar kuras
  * palīdzību glabāt iepriekš ievadītos mainīgos, aprēķinus,
