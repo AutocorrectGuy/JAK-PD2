@@ -1,19 +1,6 @@
 <?php
+
 /**
- * Autora piezīme: autors uzskata, ka array_reduce nav 
- * pieskaitāma pie iebūvētajām funckijām, jo tā darbojas
- * līdzīgi kā cikli: patiesībā tas ir tas pats foreach cikls,
- * tikai ar papildus saglabātu mainīgo, kurš jāievada array_reduce
- * pēdējā parametrā.
- * 
- * 4.4. Uzdevumā arī varētu izmantot array_reduce, tomēr
- * autors uzskata, ka forEach() šajā gadījumā ir daudz salasāmaks.
- * Lēmums pieņemts tādēļ, jo priekš array_reduce() būtu nepieciešams
- * veidot papildus mainīgo, kurā glabāt konkrēto iterācijas numuru
- * vai ar papildus ciklu pievienot pašreizējam masīvam klāt iteratorus.
- * Šajā gadījumā, šķiet, forEach tieši tādēļ vienkāršāk salasāms cilvēkam
- * un ātrāk izpildāms mašīnai. 
- * 
  * 4. uzdevums: veidot masīvu, kuru aizpildīt ar 10 brīvas 
  * izvēles skaitļiem! Izvadīt uz ekrāna
  *    4.1. skaitļu summu;
@@ -24,30 +11,45 @@
  * Piezīme: iebūvētās funkcijas izmantot ir aizliegts.
  */
 
-// array with 10 random numbers
-$myArray = array_reduce(range(0, 9), fn($acc, $curr) =>
-  [...$acc, rand(10, 100)],
-[]);
-
-// 4.1. Returns sum of the array values;
+/**
+ * Returns sum of the array values (task 4.1.).
+ *
+ * @param  array $arr The input array.
+ * @return int
+ */
 function getSum(array $arr): int
 {
   return array_reduce($arr, fn($acc, $curr) => $acc + $curr, 0);
 }
 
-// 4.2. Returns lowest value from the array;
+/**
+ * Returns lowest value from the array (task 4.2.).
+ *
+ * @param  array $arr The input array.
+ * @return int
+ */
 function getMinValue(array $arr): int
 {
   return array_reduce($arr, fn($acc, $curr) => $curr < $acc ? $curr : $acc, $arr[0]);
 }
 
-// 4.3. Returns largest value from the array;
+/**
+ * Returns largest value from the array (task 4.3.).
+ *
+ * @param  array $arr The input array.
+ * @return int
+ */
 function getMaxValue(array $arr): int
 {
   return array_reduce($arr, fn($acc, $curr) => $curr > $acc ? $curr : $acc, $arr[0]);
 }
 
-// 4.4. Returns a new array with each second value from the given array
+/**
+ * Returns a new array with each second value from the given array (task 4.4.).
+ *
+ * @param  array $arr The input array.
+ * @return array
+ */
 function collectEachSecond(array $arr): array
 {
   $temp = [];
@@ -56,17 +58,43 @@ function collectEachSecond(array $arr): array
   return $temp;
 }
 
-// Prints the generated array and all values of used functions from this file
+/**
+ * Returns array of random integers
+ *
+ * @param  int $size Size of the array.
+ * @param  int $lowestValue Lowest possible random value.
+ * @param  int $highestValue Highest possible random value.
+ * @return array
+ */
+function randomInArray(int $size, int $lowestValue, int $highestValue): array
+{
+  return array_reduce(range(0, $size - 1), fn($acc, $curr) =>
+  [...$acc, rand($lowestValue, $highestValue)],
+  []);
+}
+
+/**
+ * Prints the generated array and all values of used functions from this file.
+ *
+ * @param  array $arr The input array.
+ * @return void
+ */
 function prettyPrintTask(array $arr): void
 {
-  print('Dotais masīvs ar 10 nejaušiem cipariem: '
-    . join(', ', $arr) . '. '
-    . '<br />4.1. Skaitļu summa: ' . getSum($arr) . '.<br />'
-    . '4.2. Mazākais skaitlis: ' . getMinValue($arr) . '.<br />'
-    . '4.3. Lielākais skaitlis: ' . getMaxValue($arr) . '.<br />'
-    . '4.4. Virkne, kurā iekļauts tikai katrs otrais masīva elements: '
+  print('Array with size of ' . sizeof($arr) . ' with random integers: '
+    . join(', ', $arr) . '. <br />'
+    . '4.1. Sum of this array values: ' . getSum($arr) . '.<br />'
+    . '4.2. Lowest value in this array: ' . getMinValue($arr) . '.<br />'
+    . '4.3. Highest value in this array: ' . getMaxValue($arr) . '.<br />'
+    . '4.4. Each second value of this array: '
     . join(", ", collectEachSecond($arr)) . '. '
     );
 }
 
+/**
+ * Program output:
+ */
+
+// Array of size `10` filled with random integers in range from `1` to `100`.
+$myArray = randomInArray(10, 1, 100);
 prettyPrintTask($myArray);

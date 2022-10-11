@@ -8,13 +8,13 @@ require_once('./User.php');
 
 class Worker extends User
 {
-  private float $salary;
+  protected float $salary;
 
-  // geter and setter fn for $salary
   public function getSalary(): float
   {
     return $this->salary;
   }
+  
   public function setSalary(float $salary): void
   {
     $this->salary = $salary;

@@ -12,9 +12,10 @@
  * kas raksturo kaķus! Ar foreach cikla palīdzību izvadīt visus
  * masīva elementus uz ekrāna! 
  * - Ja nebūtu jāpielieto foreach, tad būtu pielietojis `join()` funckciju
-*/
+ */
 
 namespace Uzdevums1;
+
 use Uzdevums3;
 
 require_once(dirname(__DIR__) . '/Uzdevums3/AbstractCatDescriber.class.php');
@@ -36,21 +37,47 @@ const CAT_NAMES = [
 
 class Cat extends Uzdevums3\AbstractCatDescriber
 {
+  /**
+   * @var mixed Name of the cat.
+   */
   protected string $catName;
 
-  // converts human age to cat age in ratio 1 : 4
-  public static function toCatAge(int|float $humanAge)
+  public function setCatName($catName): void
+  {
+    $this->catName = $catName;
+  }
+  public function getCatName(): string
+  {
+    return $this->catName;
+  }
+
+  /**
+   * Returns converted human age to cat age in ratio 1 : 4.
+   *
+   * @param  int|float $humanAge
+   * @return int|float
+   */
+  public static function toCatAge(int|float $humanAge): int|float
   {
     return $humanAge * 4;
   }
 
-  // returns random Cat name from `CAT_NAMES`
+  /**
+   * Returns random Cat name from global const `CAT_NAMES`
+   *
+   * @return string
+   */
   public static function returnRandomCatName(): string
   {
     return CAT_NAMES[rand(0, sizeof(CAT_NAMES) - 1)];
   }
 
-  // From abstract class: prints out on screen predefined description of cat
+  /**
+   * Prints out on screen predefined description of `Cat` class entity.
+   * Used from abstract class. 
+   * 
+   * @return void
+   */
   public function describeCat()
   {
     $catProperties = ['garspalvains', 'jauks', 'ātrs', 'elegants', 'ruds'];
@@ -61,20 +88,16 @@ class Cat extends Uzdevums3\AbstractCatDescriber
     print('<br />');
   }
 
-  // From abstract class: sets `catName` to random cat name with `returnRandomCatName` fn and prints it on screen
+  /**
+   * Sets `$catName` to random cat name with `setCatName()` and 
+   * `returnRandomCatName()` functions and prints tne new 
+   * `Cat` entity `$catName` on the screen.
+   *
+   * @return void
+   */
   public function nameCat()
   {
     $this->setCatName(self::returnRandomCatName());
     print('Kaķa vārds ir "' . $this->getCatName() . '". <br />');
-  }
-
-  // geter and setter fn for $catName
-  public function setCatName($catName): void
-  {
-    $this->catName = $catName;
-  }
-  public function getCatName(): string
-  {
-    return $this->catName;
   }
 }

@@ -10,8 +10,9 @@
  *    klases Worker. Šai metodei jāievada šādi protected lauki: braukšanas 
  *    pieredze, braukšanas kategorija: A, B, C. 
  */
-require_once('./Worker.php');
+require_once('./Worker.class.php');
 
+// global const
 const ALLOWED_DRIVING_CATEGORIES = ['A', 'B', 'C'];
 
 class Driver extends Worker
@@ -19,25 +20,26 @@ class Driver extends Worker
   protected string $drivingExpierence;
   protected string $drivingCategory;
 
-  // geter and setter fn for $drivingExpierence
   public function getDrivingExpierence(): string
   {
     return $this->drivingExpierence;
   }
+
   public function setDrivingExpierence(string $drivingExpierence): void
   {
     $this->$drivingExpierence = $drivingExpierence;
   }
 
-  // geter and setter fn for $drivingExpierence
   public function getDrivingCategory(): string
   {
     return $this->drivingCategory;
   }
+
   public function setDrivingCategory(string $drivingCategory): void
   {
     if (!in_array($drivingCategory, ALLOWED_DRIVING_CATEGORIES)) {
-      print('Šāda šofera kategorija neeksistē! Izvēlieties kādu no sekojošajām: "'
+      print('Drivers catoegory "' . $drivingCategory
+        . '" doesn\'t exist. Please choose catgory from: "'
         . join('", ', ALLOWED_DRIVING_CATEGORIES) . '".');
       return;
     }

@@ -26,23 +26,27 @@
  *    1000. Izveidojiet otru šīs klases objektu: vārds: "Bob", vecums: 
  *    26, alga: 2000. Atrodiet John un Bob algu summu. 
  */
-require_once('./Worker.php');
-require_once('./Student.php');
-require_once('./Driver.php');
+require_once('./Worker.class.php');
+require_once('./Student.class.php');
+require_once('./Driver.class.php');
 
-// 3.(1) Create two objects with given paramets
+/**
+ * 3. Izveidojiet šīs klases objektu: vārds: "John", vecums: 25, alga: 1000. 
+ * Izveidojiet otru šīs klases objektu: vārds: "Bob", vecums: 26, alga: 2000. 
+ * Atrodiet John un Bob algu summu. 
+ */
 
-// object "John" initialization
+// Object "John" initialization
 $user1 = new Worker();
 $user1->setName('John');
 $user1->setAge(25);
 $user1->setSalary(1000);
 
-// object "Bob" initialization
+// Object "Bob" initialization
 $user2 = new Worker();
 $user2->setName('Bob');
 $user2->setAge(26);
 $user2->setSalary(2000);
 
-// 3.(2) stores $user1 and $user2 retrieved sum of theri salaries
+// Sum of $user1 and $user2 salaries
 $salarySum = $user1->getSalary() + $user2->getSalary();

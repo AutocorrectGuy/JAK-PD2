@@ -9,6 +9,9 @@ namespace Uzdevums1;
 
 class Human
 {
+  /**
+   * @var int Age of the human in human years.
+   */
   protected int $age;
 
   public function __construct(int $age)
@@ -16,7 +19,6 @@ class Human
     $this->age = $age;
   }
 
-  // geter and setter fn for $age
   public function getAge(): int
   {
     return $this->age;
