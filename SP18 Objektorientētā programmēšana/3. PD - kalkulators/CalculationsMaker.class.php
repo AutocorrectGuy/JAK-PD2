@@ -5,7 +5,7 @@ require_once("./CalculationsMaker.inteface.php");
 
 class CalculationsMaker implements CalculationsMakerInterface
 {
-  use PowerRiser;
+  use PowerRiserTrait;
 
   protected const MATH_OPERATIONS_WHITELIST = [
     'sum' => '+',

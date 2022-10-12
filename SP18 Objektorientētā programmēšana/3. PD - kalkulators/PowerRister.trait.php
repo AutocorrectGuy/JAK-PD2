@@ -1,6 +1,6 @@
 <?php
 
-trait PowerRiser
+trait PowerRiserTrait
 {
   /**
    * Returns `$num` raised to the power of `$exponent`.
