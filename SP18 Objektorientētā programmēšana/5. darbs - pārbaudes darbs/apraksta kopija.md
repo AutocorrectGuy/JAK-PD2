@@ -1,8 +1,10 @@
-### Teorijas daļa, par šādām tēmām: Abstraktās klases, Inkapsulācija, Traiti, Mantošana, Interfeisi, Redzamības zonas. 
-### Praktiskā daļa:
+# Tēma: abstraktās klases, inkapsulācija, traiti, mantošana, interfeisi, redzamības zonas. 
 
-##### Realizēt OOP struktūru pielietojot norādīto eksemplāru (tēmu) un noteikumus.
-##### Noteikumi:
+### Pārbaudes darba apraksts
+
+- Realizēt OOP struktūru pielietojot norādīto eksemplāru (tēmu) un noteikumus.
+
+- **Noteikumi**:
 - Realizēt vismaz vienu abstrakto klasi.
 - Realizēt vismaz vienu interfeisu.
 - Pielietot mantošanu.
