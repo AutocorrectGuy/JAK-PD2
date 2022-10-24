@@ -1,0 +1,48 @@
+{
+  "IATA": {
+    "RIX": "RIX",
+    "LTN": "LTN"
+  },
+  "planes": [
+    {
+      "id": "PL_001",
+      "model": "Airbus A320"
+    },
+    {
+      "id": "PL_002",
+      "model": "Airbus A320"
+    }
+  ],
+  "flights": [
+    {
+      "id": "FL_001",
+      "planeId": "PL_001",
+      "departureIATA": "RIX",
+      "arrivalIATA": "LTN",
+      "departureUNIX": 1642017600,
+      "arrivalUNIX": 1642024800,
+      "firstClassPrice": "109.00 eur",
+      "regularPrice": "39.99 eur",
+      "generateTickets": true
+    },
+    {
+      "id": "FL_002",
+      "planeId": "PL_002",
+      "departureIATA": "LTN",
+      "arrivalIATA": "RIX",
+      "departureUNIX": 1644696000,
+      "arrivalUNIX": 1644703200,
+      "firstClassPrice": "89.00 eur",
+      "regularPrice": "24.99 eur",
+      "generateTickets": true
+    }
+  ],
+  "airports": [
+    {
+      "IATA": "RIX"
+    },
+    {
+      "IATA": "LTN"
+    }
+  ]
+}
