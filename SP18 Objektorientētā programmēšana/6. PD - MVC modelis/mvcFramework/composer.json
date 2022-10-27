@@ -1,0 +1,15 @@
+{
+    "name": "marti/mvc-framework",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "AutocorrectGuy",
+            "email": "103662175+AutocorrectGuy@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
