@@ -1,3 +1,24 @@
+# Relāciju datubāžu apguve
+
+Viena lapa, ar kuru var veikt izmaiņas datubāzē.
+- Serveris: `php`;
+- Datubāze: `mysql`;
+- arhitektūra: `mvc`. 
+
+Pirms
+![Pirms](./presentation_assets/before.png)
+Pēc
+![Pēc](./presentation_assets/after.png)
+
+Darbs nav pat tuvu pabeigts. Šobrīd viss, ko ar lapu var izdarīt, ir augšuplādēt datus vienā tabulā.
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 # Kļūdu dienasgrāmata
 ---
 ## 13.12.2022 - mysqli kļūda
@@ -19,3 +40,6 @@ Pakāsu kādas 2 stundas meklējot iemeslu, kādēļ nevaru izmantot php `mysqli
 
 1. Izrādās, parastajos html failos js sintakse var būtiski atšķirties. `form` tegā `onsubmit` izrādās, ka nepieciešams `atgriezt` vērtību, nevis tikai padot funkciju, kā tas ir `react`.
 2. Nepareizi ```onsubmit="handleSubmit(event)"```; pareizi ```onsubmit="return handleSubmit(event)"```;
+
+## 15.12.2022 
+1. Beigās tāpat neizmantoju `js`, lai veiktu `CRUD` izmaiņas datubāzē, izmantoju `php`. Kad būs brīvais laiks, tā ir viena no pirmajām lietām, kas jāizpēta, jo tas ir piemirsies.
