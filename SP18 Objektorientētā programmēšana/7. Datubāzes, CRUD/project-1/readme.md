@@ -12,6 +12,14 @@ Pēc
 
 Darbs nav pat tuvu pabeigts. Šobrīd viss, ko ar lapu var izdarīt, ir augšuplādēt datus vienā tabulā.
 
+Ko es izdarīju savādāk, nekā iepriekšējo reizi:
+  - sekmīgāka mapju struktūra. It īpaši iekš src​ un views​;
+  - pats labprātīgi sāku izmantot klases un reizēm pat mantošanu. Man nesen tieši bija viens neliels VBA projekts un tur es sapratu, ka OOP stilā viss būtu daudz vienkāršāk. To es arī drīz augšuplādēšu githubā. Nepatīk VBA, bet viņš pašam noder dabojot skolēniem darbus un ne tikai man;
+  - izmntoju yarn, nevis npm. Nez kāpēc biju iedomājies iepriekšējā reizē, ka yarn​ nestrādās kopā ar php​. 😄. Vienkārši biju nobijies laikam jo php​ nepārtraukti staigāju kā pa mīnu lauku;
+  - nedaudz pamācījos batch​ windows skriptingu. Priekš manis ļoti noderīgi. Nav katru reizi, lai restartētu serveri jāraksta komandas priekš katra izmantotā porta;
+  - pārliecinošāk izmantoju tailwind. Vispār vairs nedomāju par frontendu, tas jau ir kā ūdens pat ar vanilla html,css,js. Ņemu visu no flowbite​ kur ir jau gatavi komponenti. Līdzīgi kā bootstrap​, tikai man viņš nepatīk, jo viņš pārāk ierobežots. Tādēļ tieši pārgāju uz tailwind​.
+  - composer ieliku sev ērtākā mapē. Nedaudz papraktizējos un tagad bez googles varu pats viņu konfigurēt.
+
 <br/>
 <br/>
 <br/>
