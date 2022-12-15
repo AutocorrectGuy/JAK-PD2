@@ -1,0 +1,9 @@
+{
+    "name": "martins/project-1",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "require": {}
+}
