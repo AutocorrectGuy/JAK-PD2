@@ -1,0 +1,11 @@
+@host = http://127.0.0.1:3001/api
+
+###
+
+POST {{host}}/login
+Content-Type: application/json
+
+{
+  "email": "martins.sturainis@jak.lv",
+  "password": "test123123"
+}

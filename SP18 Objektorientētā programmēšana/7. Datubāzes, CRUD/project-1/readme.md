@@ -51,3 +51,14 @@ Pakāsu kādas 2 stundas meklējot iemeslu, kādēļ nevaru izmantot php `mysqli
 
 ## 15.12.2022 
 1. Beigās tāpat neizmantoju `js`, lai veiktu `CRUD` izmaiņas datubāzē, izmantoju `php`. Kad būs brīvais laiks, tā ir viena no pirmajām lietām, kas jāizpēta, jo tas ir piemirsies.
+
+# 16.12.2022
+
+1. TODO: tagad inputfiels un tabula nerenderējas, ja tabulā nav vismaz viena ieraksta. Izveidot normālu vaicājumu gadījumam, ja tabulā nav neviena ieraksta. 
+```sql
+select * from `mytable` or else describe `myTable`
+```  
+
+2. TODO: uzlikt pareizus `headers` localtunnelim, lai nerādītos, ka tas ir locatunnel savienojums.
+
+3. ...
